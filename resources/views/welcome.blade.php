@@ -1,140 +1,1491 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./admin/assets/images/favicon.png"
+    />
+    <!-- Custom CSS -->
+    <link
+      href="./admin/assets/libs/fullcalendar/dist/fullcalendar.min.css"
+      rel="stylesheet"
+    />
+    <link href="./admin/assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
+    <link href="./admin/dist/css/style.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
 
-        <title>Laravel</title>
+  <body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar" data-navbarbg="skin5">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header" data-logobg="skin5">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon ps-2">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="./admin/assets/images/logo-icon.png"
+                  alt="homepage"
+                  class="light-logo"
+                  width="25"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+              <span class="logo-text ms-2">
+                <!-- dark Logo text -->
+                <img
+                  src="./admin/assets/images/logo-text.png"
+                  alt="homepage"
+                  class="light-logo"
+                />
+              </span>
+              <!-- Logo icon -->
+              <!-- <b class="logo-icon"> -->
+              <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+              <!-- Dark Logo icon -->
+              <!-- <img src="./admin/assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
+              <!-- </b> -->
+              <!--End Logo icon -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Toggle which is visible on mobile only -->
+            <!-- ============================================================== -->
+            <a
+              class="nav-toggler waves-effect waves-light d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+          >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-start me-auto">
+              <li class="nav-item d-none d-lg-block">
+                <a
+                  class="nav-link sidebartoggler waves-effect waves-light"
+                  href="javascript:void(0)"
+                  data-sidebartype="mini-sidebar"
+                  ><i class="mdi mdi-menu font-24"></i
+                ></a>
+              </li>
+              <!-- ============================================================== -->
+              <!-- create new -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <span class="d-none d-md-block"
+                    >Create New <i class="fa fa-angle-down"></i
+                  ></span>
+                  <span class="d-block d-md-none"
+                    ><i class="fa fa-plus"></i
+                  ></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- Search -->
+              <!-- ============================================================== -->
+              <li class="nav-item search-box">
+                <a
+                  class="nav-link waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  ><i class="mdi mdi-magnify fs-4"></i
+                ></a>
+                <form class="app-search position-absolute">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search &amp; enter"
+                  />
+                  <a class="srh-btn"><i class="mdi mdi-window-close"></i></a>
+                </form>
+              </li>
+            </ul>
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav float-end">
+              <!-- ============================================================== -->
+              <!-- Comment -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="mdi mdi-bell font-24"></i>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Comment -->
+              <!-- ============================================================== -->
+              <!-- ============================================================== -->
+              <!-- Messages -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="#"
+                  id="2"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="font-24 mdi mdi-comment-processing"></i>
+                </a>
+                <ul
+                  class="
+                    dropdown-menu dropdown-menu-end
+                    mailbox
+                    animated
+                    bounceInDown
+                  "
+                  aria-labelledby="2"
+                >
+                  <ul class="list-style-none">
+                    <li>
+                      <div class="">
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="
+                                btn btn-success btn-circle
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
+                              ><i class="mdi mdi-calendar text-white fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Event today</h5>
+                              <span class="mail-desc"
+                                >Just a reminder that event</span
+                              >
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
+                          </div>
                         </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="
+                                btn btn-info btn-circle
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
+                              ><i class="mdi mdi-settings fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Settings</h5>
+                              <span class="mail-desc"
+                                >You can customize this template</span
+                              >
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
+                          </div>
                         </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="
+                                btn btn-primary btn-circle
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
+                              ><i class="mdi mdi-account fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Pavan kumar</h5>
+                              <span class="mail-desc"
+                                >Just see the my admin!</span
+                              >
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
+                          </div>
                         </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
+                        <!-- Message -->
+                        <a href="javascript:void(0)" class="link border-top">
+                          <div class="d-flex no-block align-items-center p-10">
+                            <span
+                              class="
+                                btn btn-danger btn-circle
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                              "
+                              ><i class="mdi mdi-link fs-4"></i
+                            ></span>
+                            <div class="ms-2">
+                              <h5 class="mb-0">Luanch Admin</h5>
+                              <span class="mail-desc"
+                                >Just see the my new admin!</span
+                              >
                             </div>
-                        </div>
-                    </div>
-                </div>
+                          </div>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- End Messages -->
+              <!-- ============================================================== -->
 
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
-            </div>
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="
+                    nav-link
+                    dropdown-toggle
+                    text-muted
+                    waves-effect waves-dark
+                    pro-pic
+                  "
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="./admin/assets/images/users/1.jpg"
+                    alt="user"
+                    class="rounded-circle"
+                    width="31"
+                  />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-end user-dd animated"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-email me-1 ms-1"></i> Inbox</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="mdi mdi-settings me-1 ms-1"></i> Account
+                    Setting</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="javascript:void(0)"
+                    ><i class="fa fa-power-off me-1 ms-1"></i> Logout</a
+                  >
+                  <div class="dropdown-divider"></div>
+                  <div class="ps-4 p-10">
+                    <a
+                      href="javascript:void(0)"
+                      class="btn btn-sm btn-success btn-rounded text-white"
+                      >View Profile</a
+                    >
+                  </div>
+                </ul>
+              </li>
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar" data-sidebarbg="skin5">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav" class="pt-4">
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="index.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-view-dashboard"></i
+                  ><span class="hide-menu">Dashboard</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="charts.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-chart-bar"></i
+                  ><span class="hide-menu">Charts</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="widgets.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-chart-bubble"></i
+                  ><span class="hide-menu">Widgets</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="tables.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-border-inside"></i
+                  ><span class="hide-menu">Tables</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="grid.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-blur-linear"></i
+                  ><span class="hide-menu">Full Width</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-receipt"></i
+                  ><span class="hide-menu">Forms </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="form-basic.html" class="sidebar-link"
+                      ><i class="mdi mdi-note-outline"></i
+                      ><span class="hide-menu"> Form Basic </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="form-wizard.html" class="sidebar-link"
+                      ><i class="mdi mdi-note-plus"></i
+                      ><span class="hide-menu"> Form Wizard </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="pages-buttons.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-relative-scale"></i
+                  ><span class="hide-menu">Buttons</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-face"></i
+                  ><span class="hide-menu">Icons </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="icon-material.html" class="sidebar-link"
+                      ><i class="mdi mdi-emoticon"></i
+                      ><span class="hide-menu"> Material Icons </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="icon-fontawesome.html" class="sidebar-link"
+                      ><i class="mdi mdi-emoticon-cool"></i
+                      ><span class="hide-menu"> Font Awesome Icons </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="pages-elements.html"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-pencil"></i
+                  ><span class="hide-menu">Elements</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-move-resize-variant"></i
+                  ><span class="hide-menu">Addons </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="index2.html" class="sidebar-link"
+                      ><i class="mdi mdi-view-dashboard"></i
+                      ><span class="hide-menu"> Dashboard-2 </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="pages-gallery.html" class="sidebar-link"
+                      ><i class="mdi mdi-multiplication-box"></i
+                      ><span class="hide-menu"> Gallery </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="pages-calendar.html" class="sidebar-link"
+                      ><i class="mdi mdi-calendar-check"></i
+                      ><span class="hide-menu"> Calendar </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="pages-invoice.html" class="sidebar-link"
+                      ><i class="mdi mdi-bulletin-board"></i
+                      ><span class="hide-menu"> Invoice </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="pages-chat.html" class="sidebar-link"
+                      ><i class="mdi mdi-message-outline"></i
+                      ><span class="hide-menu"> Chat Option </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-account-key"></i
+                  ><span class="hide-menu">Authentication </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="authentication-login.html" class="sidebar-link"
+                      ><i class="mdi mdi-all-inclusive"></i
+                      ><span class="hide-menu"> Login </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="authentication-register.html" class="sidebar-link"
+                      ><i class="mdi mdi-all-inclusive"></i
+                      ><span class="hide-menu"> Register </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link has-arrow waves-effect waves-dark"
+                  href="javascript:void(0)"
+                  aria-expanded="false"
+                  ><i class="mdi mdi-alert"></i
+                  ><span class="hide-menu">Errors </span></a
+                >
+                <ul aria-expanded="false" class="collapse first-level">
+                  <li class="sidebar-item">
+                    <a href="error-403.html" class="sidebar-link"
+                      ><i class="mdi mdi-alert-octagon"></i
+                      ><span class="hide-menu"> Error 403 </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="error-404.html" class="sidebar-link"
+                      ><i class="mdi mdi-alert-octagon"></i
+                      ><span class="hide-menu"> Error 404 </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="error-405.html" class="sidebar-link"
+                      ><i class="mdi mdi-alert-octagon"></i
+                      ><span class="hide-menu"> Error 405 </span></a
+                    >
+                  </li>
+                  <li class="sidebar-item">
+                    <a href="error-500.html" class="sidebar-link"
+                      ><i class="mdi mdi-alert-octagon"></i
+                      ><span class="hide-menu"> Error 500 </span></a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="sidebar-item p-3">
+                <a
+                  href="https://github.com/wrappixel/matrix-admin-bt5"
+                  target="_blank"
+                  class="
+                    w-100
+                    btn btn-cyan
+                    d-flex
+                    align-items-center
+                    text-white
+                  "
+                  ><i class="mdi mdi-cloud-download font-20 me-2"></i>Download
+                  Free</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
         </div>
-    </body>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Dashboard-2</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Library
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <div class="row">
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">Dashboard</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h1 class="font-light text-white">
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Charts</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card card-hover">
+                <div class="box bg-warning text-center">
+                  <h1 class="font-light text-white">
+                    <i class="mdi mdi-collage"></i>
+                  </h1>
+                  <h6 class="text-white">Widgets</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <i class="mdi mdi-border-outside"></i>
+                  </h1>
+                  <h6 class="text-white">Tables</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Latest Posts</h4>
+                </div>
+                <div class="comment-widgets scrollable">
+                  <!-- Comment Row -->
+                  <div class="d-flex flex-row comment-row mt-0">
+                    <div class="p-2">
+                      <img
+                        src="./admin/assets/images/users/1.jpg"
+                        alt="user"
+                        width="50"
+                        class="rounded-circle"
+                      />
+                    </div>
+                    <div class="comment-text w-100">
+                      <h6 class="font-medium">James Anderson</h6>
+                      <span class="mb-3 d-block"
+                        >Lorem Ipsum is simply dummy text of the printing and
+                        type setting industry.
+                      </span>
+                      <div class="comment-footer">
+                        <span class="text-muted float-end">April 14, 2021</span>
+                        <button
+                          type="button"
+                          class="btn btn-cyan btn-sm text-white"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-success btn-sm text-white"
+                        >
+                          Publish
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-danger btn-sm text-white"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Comment Row -->
+                  <div class="d-flex flex-row comment-row">
+                    <div class="p-2">
+                      <img
+                        src="./admin/assets/images/users/4.jpg"
+                        alt="user"
+                        width="50"
+                        class="rounded-circle"
+                      />
+                    </div>
+                    <div class="comment-text active w-100">
+                      <h6 class="font-medium">Michael Jorden</h6>
+                      <span class="mb-3 d-block"
+                        >Lorem Ipsum is simply dummy text of the printing and
+                        type setting industry.
+                      </span>
+                      <div class="comment-footer">
+                        <span class="text-muted float-end">May 10, 2021</span>
+                        <button
+                          type="button"
+                          class="btn btn-cyan btn-sm text-white"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-success btn-sm text-white"
+                        >
+                          Publish
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-danger btn-sm text-white"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Comment Row -->
+                  <div class="d-flex flex-row comment-row">
+                    <div class="p-2">
+                      <img
+                        src="./admin/assets/images/users/5.jpg"
+                        alt="user"
+                        width="50"
+                        class="rounded-circle"
+                      />
+                    </div>
+                    <div class="comment-text w-100">
+                      <h6 class="font-medium">Johnathan Doeting</h6>
+                      <span class="mb-3 d-block"
+                        >Lorem Ipsum is simply dummy text of the printing and
+                        type setting industry.
+                      </span>
+                      <div class="comment-footer">
+                        <span class="text-muted float-end">August 1, 2021</span>
+                        <button
+                          type="button"
+                          class="btn btn-cyan btn-sm text-white"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-success btn-sm text-white"
+                        >
+                          Publish
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-danger btn-sm text-white"
+                        >
+                          Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">To Do List</h4>
+                  <div class="todo-widget scrollable" style="height: 450px">
+                    <ul
+                      class="list-task todo-list list-group mb-0"
+                      data-role="tasklist"
+                    >
+                      <li class="list-group-item todo-item" data-role="task">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="customCheck"
+                          />
+                          <label
+                            class="form-check-label mb-0 w-100 todo-label"
+                            for="customCheck"
+                          >
+                            <span class="todo-desc fw-normal"
+                              >Lorem Ipsum is simply dummy text of the printing
+                              and typesetting industry.</span
+                            >
+                            <span class="badge rounded-pill bg-danger float-end"
+                              >Today</span
+                            >
+                          </label>
+                        </div>
+                        <ul class="list-style-none assignedto">
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/1.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Steave"
+                            />
+                          </li>
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/2.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Jessica"
+                            />
+                          </li>
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/3.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Priyanka"
+                            />
+                          </li>
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/4.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Selina"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="list-group-item todo-item" data-role="task">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="customCheck1"
+                          />
+                          <label
+                            class="form-check-label mb-0 w-100 todo-label"
+                            for="customCheck1"
+                          >
+                            <span class="todo-desc fw-normal"
+                              >Lorem Ipsum is simply dummy text of the
+                              printing</span
+                            ><span
+                              class="badge rounded-pill bg-primary float-end"
+                              >1 week
+                            </span>
+                          </label>
+                        </div>
+                        <div class="item-date">26 jun 2021</div>
+                      </li>
+                      <li class="list-group-item todo-item" data-role="task">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="customCheck2"
+                          />
+                          <label
+                            class="form-check-label mb-0 w-100 todo-label"
+                            for="customCheck2"
+                          >
+                            <span class="todo-desc fw-normal"
+                              >Give Purchase report to</span
+                            >
+                            <span class="badge rounded-pill bg-info float-end"
+                              >Yesterday</span
+                            >
+                          </label>
+                        </div>
+                        <ul class="list-style-none assignedto">
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/3.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Priyanka"
+                            />
+                          </li>
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/4.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Selina"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="list-group-item todo-item" data-role="task">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="customCheck3"
+                          />
+                          <label
+                            class="form-check-label mb-0 w-100 todo-label"
+                            for="customCheck3"
+                          >
+                            <span class="todo-desc fw-normal"
+                              >Lorem Ipsum is simply dummy text of the printing
+                            </span>
+                            <span
+                              class="badge rounded-pill bg-warning float-end"
+                              >2 weeks</span
+                            >
+                          </label>
+                        </div>
+                        <div class="item-date">26 jun 2021</div>
+                      </li>
+                      <li class="list-group-item todo-item" data-role="task">
+                        <div class="form-check">
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="customCheck4"
+                          />
+                          <label
+                            class="form-check-label mb-0 w-100 todo-label"
+                            for="customCheck4"
+                          >
+                            <span class="todo-desc fw-normal"
+                              >Give Purchase report to</span
+                            >
+                            <span class="badge rounded-pill bg-info float-end"
+                              >Yesterday</span
+                            >
+                          </label>
+                        </div>
+                        <ul class="list-style-none assignedto">
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/3.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Priyanka"
+                            />
+                          </li>
+                          <li class="assignee">
+                            <img
+                              class="rounded-circle"
+                              width="40"
+                              src="./admin/assets/images/users/4.jpg"
+                              alt="user"
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              title=""
+                              data-original-title="Selina"
+                            />
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- card -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title mb-0">Progress Box</h4>
+                  <div class="mt-3">
+                    <div class="d-flex no-block align-items-center">
+                      <span>81% Clicks</span>
+                      <div class="ms-auto">
+                        <span>125</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped"
+                        role="progressbar"
+                        style="width: 81%"
+                        aria-valuenow="10"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex no-block align-items-center mt-4">
+                      <span>72% Uniquie Clicks</span>
+                      <div class="ms-auto">
+                        <span>120</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-success"
+                        role="progressbar"
+                        style="width: 72%"
+                        aria-valuenow="25"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex no-block align-items-center mt-4">
+                      <span>53% Impressions</span>
+                      <div class="ms-auto">
+                        <span>785</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-info"
+                        role="progressbar"
+                        style="width: 53%"
+                        aria-valuenow="50"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="d-flex no-block align-items-center mt-4">
+                      <span>3% Online Users</span>
+                      <div class="ms-auto">
+                        <span>8</span>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-striped bg-danger"
+                        role="progressbar"
+                        style="width: 3%"
+                        aria-valuenow="75"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card new -->
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title mb-0">News Updates</h4>
+                </div>
+                <ul class="list-style-none">
+                  <li class="d-flex no-block card-body">
+                    <i class="mdi mdi-check-circle fs-4 w-30px mt-1"></i>
+                    <div>
+                      <a href="#" class="mb-0 font-medium p-0"
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.</a
+                      >
+                      <span class="text-muted"
+                        >dolor sit amet, consectetur adipiscing</span
+                      >
+                    </div>
+                    <div class="ms-auto">
+                      <div class="tetx-right">
+                        <h5 class="text-muted mb-0">20</h5>
+                        <span class="text-muted font-16">Jan</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex no-block card-body border-top">
+                    <i class="mdi mdi-gift fs-4 w-30px mt-1"></i>
+                    <div>
+                      <a href="#" class="mb-0 font-medium p-0"
+                        >Congratulation Maruti, Happy Birthday</a
+                      >
+                      <span class="text-muted"
+                        >many many happy returns of the day</span
+                      >
+                    </div>
+                    <div class="ms-auto">
+                      <div class="tetx-right">
+                        <h5 class="text-muted mb-0">11</h5>
+                        <span class="text-muted font-16">Jan</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex no-block card-body border-top">
+                    <i class="mdi mdi-plus fs-4 w-30px mt-1"></i>
+                    <div>
+                      <a href="#" class="mb-0 font-medium p-0"
+                        >Maruti is a Responsive Admin theme</a
+                      >
+                      <span class="text-muted"
+                        >But already everything was solved. It will ...</span
+                      >
+                    </div>
+                    <div class="ms-auto">
+                      <div class="tetx-right">
+                        <h5 class="text-muted mb-0">19</h5>
+                        <span class="text-muted font-16">Jan</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex no-block card-body border-top">
+                    <i class="mdi mdi-leaf fs-4 w-30px mt-1"></i>
+                    <div>
+                      <a href="#" class="mb-0 font-medium p-0"
+                        >Envato approved Maruti Admin template</a
+                      >
+                      <span class="text-muted"
+                        >i am very happy to approved by TF</span
+                      >
+                    </div>
+                    <div class="ms-auto">
+                      <div class="tetx-right">
+                        <h5 class="text-muted mb-0">20</h5>
+                        <span class="text-muted font-16">Jan</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="d-flex no-block card-body border-top">
+                    <i
+                      class="mdi mdi-comment-question-outline fs-4 w-30px mt-1"
+                    ></i>
+                    <div>
+                      <a href="#" class="mb-0 font-medium p-0">
+                        I am alwayse here if you have any question</a
+                      >
+                      <span class="text-muted"
+                        >we glad that you choose our template</span
+                      >
+                    </div>
+                    <div class="ms-auto">
+                      <div class="tetx-right">
+                        <h5 class="text-muted mb-0">15</h5>
+                        <span class="text-muted font-16">Jan</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5 class="card-title">Calender</h5>
+              <div class="card">
+                <div class="">
+                  <div class="row">
+                    <div class="col-lg-3 border-right pe-0">
+                      <div class="card-body border-bottom">
+                        <h4 class="card-title mt-2">Drag & Drop Event</h4>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <div id="calendar-events" class="">
+                              <div
+                                class="calendar-events mb-3"
+                                data-class="bg-info"
+                              >
+                                <i class="fa fa-circle text-info me-2"></i>Event
+                                One
+                              </div>
+                              <div
+                                class="calendar-events mb-3"
+                                data-class="bg-success"
+                              >
+                                <i class="fa fa-circle text-success me-2"></i>
+                                Event Two
+                              </div>
+                              <div
+                                class="calendar-events mb-3"
+                                data-class="bg-danger"
+                              >
+                                <i class="fa fa-circle text-danger me-2"></i
+                                >Event Three
+                              </div>
+                              <div
+                                class="calendar-events mb-3"
+                                data-class="bg-warning"
+                              >
+                                <i class="fa fa-circle text-warning me-2"></i
+                                >Event Four
+                              </div>
+                            </div>
+                            <!-- checkbox -->
+                            <div class="form-check">
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="drop-remove"
+                              />
+                              <label class="form-check-label" for="drop-remove"
+                                >Remove after drop</label
+                              >
+                            </div>
+                            <a
+                              href="javascript:void(0)"
+                              data-toggle="modal"
+                              data-target="#add-new-event"
+                              class="
+                                d-flex
+                                align-items-center
+                                justify-content-center
+                                btn
+                                mt-3
+                                btn-info
+                                d-block
+                                waves-effect waves-light
+                              "
+                            >
+                              <i class="mdi mdi-plus fs-4 me-1"></i> Add New
+                              Event
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-9">
+                      <div class="card-body b-l calender-sidebar">
+                        <div id="calendar"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- BEGIN MODAL -->
+          <div class="modal none-border" id="my-event">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title"><strong>Add Event</strong></h4>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary waves-effect"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-success save-event waves-effect waves-light"
+                  >
+                    Create event
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger delete-event waves-effect waves-light"
+                    data-dismiss="modal"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Add Category -->
+          <div class="modal fade none-border" id="add-new-event">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title"><strong>Add</strong> a category</h4>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-hidden="true"
+                  >
+                    &times;
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="control-label">Category Name</label>
+                        <input
+                          class="form-control form-white"
+                          placeholder="Enter name"
+                          type="text"
+                          name="category-name"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <label class="control-label"
+                          >Choose Category Color</label
+                        >
+                        <select
+                          class="form-select shadow-none form-white"
+                          data-placeholder="Choose a color..."
+                          name="category-color"
+                        >
+                          <option value="success">Success</option>
+                          <option value="danger">Danger</option>
+                          <option value="info">Info</option>
+                          <option value="primary">Primary</option>
+                          <option value="warning">Warning</option>
+                          <option value="inverse">Inverse</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="
+                      btn btn-danger
+                      waves-effect waves-light
+                      save-category
+                    "
+                    data-dismiss="modal"
+                  >
+                    Save
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary waves-effect"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END MODAL -->
+
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+          All Rights Reserved by Matrix-admin. Designed and Developed by
+          <a href="https://www.wrappixel.com">WrapPixel</a>.
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="./admin/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="./admin/dist/js/jquery.ui.touch-punch-improved.js"></script>
+    <script src="./admin/dist/js/jquery-ui.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="./admin/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="./admin/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="./admin/assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="./admin/dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="./admin/dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="./admin/dist/js/custom.min.js"></script>
+    <!-- this page js -->
+    <script src="./admin/assets/libs/moment/min/moment.min.js"></script>
+    <script src="./admin/assets/libs/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="./admin/dist/js/pages/calendar/cal-init.js"></script>
+  </body>
 </html>
