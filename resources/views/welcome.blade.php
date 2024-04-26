@@ -20,7 +20,7 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./admin/assets/images/favicon.png"
+      href="./admin/assets/images/car.png"
     />
     <!-- Custom CSS -->
     <link
