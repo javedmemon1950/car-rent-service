@@ -15,18 +15,7 @@ use App\Http\Controllers\AuthController;
 */
 
 // Auth Routes
-Route::middleware(['guest'])->group(function () {
-    Route::get('/login', [AuthController::class, 'login_form'])->name('login_form');
-    Route::post('/login', [AuthController::class, 'login'])->name('login');
-    Route::get('/register', [AuthController::class, 'register_form'])->name('register_form');
-    Route::post('/register', [AuthController::class, 'register'])->name('register');
-});
+require __DIR__.'/auth_routes.php';
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-    
-    Route::get('/', function () {
-        return view('welcome');
-    }); 
-
-});
+// Admin Routes
+require __DIR__.'/admin_routes.php';
