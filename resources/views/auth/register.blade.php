@@ -55,17 +55,18 @@
                         <div class="text-center">
                             <h1>Register</h1>
                         </div>
-                        <form action="">
+                        <form method="POST" action="{{ route('register') }}">
+                        @csrf
                         <div class="row gy-2 overflow-hidden">
                           <div class="col-12">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
-                                <label for="email" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="John Doe" required>
+                                <label for="name" class="form-label">Name</label>
                             </div>
                             <div class="col-12">
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
-                                <label for="email" class="form-label">Contact</label>
+                                <input type="text" class="form-control" name="contact" id="contact" placeholder="03*********" required>
+                                <label for="contact" class="form-label">Contact</label>
                             </div>
                             <div class="col-12">
                             <div class="form-floating mb-3">
@@ -81,8 +82,8 @@
                             </div>
                             <div class="col-12">
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" name="password" id="password" value="" placeholder="Password" required>
-                                <label for="password" class="form-label">Re-enter password</label>
+                                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" value="" placeholder="Password" required>
+                                <label for="password_confirmation" class="form-label">Re-enter password</label>
                             </div>
                             </div>
 
@@ -92,7 +93,7 @@
                             </div>
                             </div>
                             <div class="col-12">
-                            <p class="m-0 text-secondary text-center">Already have an account? <a href="#!" class="link-primary text-decoration-none">Sign in</a></p>
+                            <p class="m-0 text-secondary text-center">Already have an account? <a href="{{ route('login_form') }}" class="link-primary text-decoration-none">Sign in</a></p>
                             </div>
                         </div>
                         </form>

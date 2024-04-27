@@ -55,7 +55,8 @@
                         <div class="text-center">
                             <h1>Login</h1>
                         </div>
-                        <form action="">
+                        <form method="POST" action="{{ route('login') }}">
+                        @csrf
                         <div class="row gy-2 overflow-hidden">
                             <div class="col-12">
                             <div class="form-floating mb-3">
@@ -76,7 +77,7 @@
                             </div>
                             </div>
                             <div class="col-12">
-                            <p class="m-0 text-secondary text-center">Don't have an account? <a href="#!" class="link-primary text-decoration-none">Sign up</a></p>
+                            <p class="m-0 text-secondary text-center">Don't have an account? <a href="{{ route('register_form') }}" class="link-primary text-decoration-none">Sign up</a></p>
                             </div>
                         </div>
                         </form>
