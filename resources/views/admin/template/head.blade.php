@@ -25,6 +25,10 @@
       href="./admin/assets/libs/fullcalendar/dist/fullcalendar.min.css"
       rel="stylesheet"
     />
+    <link
+      href="./admin/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css"
+      rel="stylesheet"
+    />
     <link href="./admin/assets/extra-libs/calendar/calendar.css" rel="stylesheet" />
     <link href="./admin/dist/css/style.min.css" rel="stylesheet" />
 
