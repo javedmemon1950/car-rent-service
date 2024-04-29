@@ -7,11 +7,11 @@ use App\Http\Controllers\Admin\UserManagemetController;
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
-    });
+    })->name('admin.dashboard');
     
     Route::get('/users', function () {
         return view('admin.users');
-    });
+    })->name('admin.users');
 
     // User Management Routes
     Route::get('/all_users', [UserManagemetController::class, 'all_users'])->name('admin.all_users');

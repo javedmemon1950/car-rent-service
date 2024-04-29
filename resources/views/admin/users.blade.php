@@ -108,8 +108,8 @@
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody id="userDataTable">
+                        <!-- <tr>
                           <td>Tiger Nixon</td>
                           <td>tiger@email.com</td>
                           <td>+1-418-543-8090</td>
@@ -125,7 +125,7 @@
                                 <i class="mdi mdi-delete"></i>
                             </button>
                           </td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -190,8 +190,43 @@
         $(document).ready(function(){
           $("#zero_config").DataTable();
 
-          
-        })
+          var userData = "";
+
+          $.ajax({    
+            type: "GET",
+            url: "http://127.0.0.1:8000/all_users",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function(response){
+              for (let i = 0; i < response.length; i++) {
+                userData += `
+                        <tr>
+                          <td>${response[i].name}</td>
+                          <td>${response[i].email}</td>
+                          <td>${response[i].contact}</td>
+                          <td>${response[i].isAdmin == 1 ? "Admin" : "Customer"}</td>
+                          <td>
+                            <button id="viewUserBtn" type="button" class="btn btn-outline-primary">
+                                <i class="mdi mdi-eye-outline"></i>
+                            </button>
+                            <button id="updateUserBtn" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateUser">
+                                <i class="mdi mdi-lead-pencil"></i>
+                            </button>
+                            <button id="deleteUserBtn" type="button" class="btn btn-outline-danger">
+                                <i class="mdi mdi-delete"></i>
+                            </button>
+                          </td>
+                        </tr>
+                `;
+                
+                $('#userDataTable').html(userData);
+
+              }
+            },    
+            error: function(){}
+          });
+
+        });
     </script>
   
 </body>

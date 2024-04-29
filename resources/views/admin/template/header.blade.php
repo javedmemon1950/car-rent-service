@@ -67,7 +67,7 @@
                     ><i class="mdi mdi-account me-1 ms-1"></i> My Profile</a
                   >
                   <!-- <div class="dropdown-divider"></div> -->
-                  <a class="dropdown-item" href="javascript:void(0)"
+                  <a href="{{ route('logout') }}" class="dropdown-item" href="javascript:void(0)"
                     ><i class="fa fa-power-off me-1 ms-1"></i> Logout</a
                   >
                 </ul>
