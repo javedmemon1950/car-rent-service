@@ -37,7 +37,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="index.html"
+                  href="{{route('admin.categories')}}"
                   aria-expanded="false"
                   ><i class="mdi mdi-arrow-down-drop-circle"></i
                   ><span class="hide-menu">Category</span></a
