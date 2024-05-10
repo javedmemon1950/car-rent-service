@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\UserManagemetController;
+use App\Http\Controllers\Admin\CategoryManagementController;
 
 
 Route::middleware(['auth'])->group(function () {
@@ -13,10 +14,19 @@ Route::middleware(['auth'])->group(function () {
         return view('admin.users');
     })->name('admin.users');
 
+    
+
     // User Management Routes
     Route::get('/all_users', [UserManagemetController::class, 'all_users'])->name('admin.all_users');
     Route::post('/create_user', [UserManagemetController::class, 'create_user'])->name('admin.create_user');
     Route::post('/edit_user', [UserManagemetController::class, 'edit_user'])->name('admin.edit_user');
     Route::get('/delete_user/{id}', [UserManagemetController::class, 'delete_user'])->name('admin.delete_user');
 
+    //Category Managements Routes
+    Route::get('/categories', [CategoryManagementController::class, 'categories'])->name('admin.categories');
+    Route::get('/addCategoryForm',[CategoryManagementController::class,'addCategoryForm'])->name('admin.addCategoryForm');
+    Route::post('/addCategory',[CategoryManagementController::class,'addCategory'])->name('admin.addCategory');
+    Route::get('/deleteCategory{id}',[CategoryManagementController::class,'deleteCategory'])->name('admin.deleteCategory');
+    Route::get('/editCategoryForm{id}',[CategoryManagementController::class,'editCategoryForm'])->name('admin.editCategoryForm');
+    Route::post('/editCategory{id}',[CategoryManagementController::class,'editCategory'])->name('admin.editCategory');
 });
