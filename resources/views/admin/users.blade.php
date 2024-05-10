@@ -71,7 +71,7 @@
                     <input type="email" class="form-control" id="newUserRepeatPasswordInput" aria-describedby="emailHelp">
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="isNewUserAdmin">
+                    <input class="form-check-input" type="checkbox" id="isNewUserAdmin">
                     <label class="form-check-label" for="isNewUserAdmin">
                       Is user admin?
                     </label>
@@ -82,12 +82,11 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Add User</button>
+                <button id="createNewUserBtn" type="button" class="btn btn-primary">Add User</button>
               </div>
             </div>
           </div>
         </div>
-
 
         
         <div class="container-fluid">
@@ -143,6 +142,7 @@
                     <div class="modal-body">
                       
                       <form>
+                        <input hidden type="text" class="form-control" id="updateUserIdInput" aria-describedby="emailHelp">
                         <div class="mb-3">
                           <label for="updateUserNameInput" class="form-label">Name</label>
                           <input type="email" class="form-control" id="updateUserNameInput" aria-describedby="emailHelp">
@@ -167,7 +167,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Update User</button>
+                      <button onclick="updateUser()" type="button" class="btn btn-primary">Update User</button>
                     </div>
                   </div>
                 </div>
@@ -187,46 +187,141 @@
     <script src="./admin/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
     <script src="./admin/assets/extra-libs/DataTables/datatables.min.js"></script>
     <script>
-        $(document).ready(function(){
-          $("#zero_config").DataTable();
+      $("#zero_config").DataTable();
 
-          var userData = "";
+          function fetchUserData(){
+            var userData = "";
+              $.ajax({    
+              type: "GET",
+              url: "http://127.0.0.1:8000/all_users",
+              contentType: "application/json",
+              dataType: "json",
+              success: function(response) {
+                for (let i = 0; i < response.length; i++) {
+                  userData += `
+                          <tr>
+                            <td>${response[i].name}</td>
+                            <td>${response[i].email}</td>
+                            <td>${response[i].contact}</td>
+                            <td>${response[i].isAdmin == 1 ? "Admin" : "Customer"}</td>
+                            <td>
+                              <button id="viewUserBtn" type="button" class="btn btn-outline-primary">
+                                  <i class="mdi mdi-eye-outline"></i>
+                              </button>
+                              <button onclick="updateUserModal(${response[i].id} , '${response[i].name}' , '${response[i].contact}' , '${response[i].email}' , '${response[i].isAdmin}')" id="updateUserBtn" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateUser">
+                                  <i class="mdi mdi-lead-pencil"></i>
+                              </button>
+                              <button onclick="deleteData(${response[i].id})" id="deleteUserBtn" type="button" class="btn btn-outline-danger">
+                                  <i class="mdi mdi-delete"></i>
+                              </button>
+                            </td>
+                          </tr>
+                  `;
+                  
+                  $('#userDataTable').html(userData);
 
-          $.ajax({    
-            type: "GET",
-            url: "http://127.0.0.1:8000/all_users",
-            contentType: "application/json; charset=utf-8",
-            dataType: "json",
-            success: function(response){
-              for (let i = 0; i < response.length; i++) {
-                userData += `
-                        <tr>
-                          <td>${response[i].name}</td>
-                          <td>${response[i].email}</td>
-                          <td>${response[i].contact}</td>
-                          <td>${response[i].isAdmin == 1 ? "Admin" : "Customer"}</td>
-                          <td>
-                            <button id="viewUserBtn" type="button" class="btn btn-outline-primary">
-                                <i class="mdi mdi-eye-outline"></i>
-                            </button>
-                            <button id="updateUserBtn" type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateUser">
-                                <i class="mdi mdi-lead-pencil"></i>
-                            </button>
-                            <button id="deleteUserBtn" type="button" class="btn btn-outline-danger">
-                                <i class="mdi mdi-delete"></i>
-                            </button>
-                          </td>
-                        </tr>
-                `;
+                }
+              },    
+              error: function(){}
+            });
+          }
+
+          fetchUserData();
+
+          function createNewUser(){
+            let userModel = {
+              name: $('#newUserNameInput').val(),
+              contact: $('#newUserContactInput').val(),
+              email: $('#newUserEmailInput').val(),
+              password: $('#newUserPasswordInput').val(),
+              password_confirmation: $('#newUserRepeatPasswordInput').val(),
+              isAdmin: $('#isNewUserAdmin').val(),
+            };
+
+              $.ajax({    
+              type: "POST",
+              url: "http://127.0.0.1:8000/create_user",
+              headers: {
+                "X-CSRF-Token": $('meta[name="csrf-token"]').attr('content')
+              },
+              data: userModel,
+              dataType: "json",
+              success: function(response){
                 
-                $('#userDataTable').html(userData);
+                fetchUserData();
 
+                console.log(response.success)
+
+              },    
+              error: function(error){
+                console.log(error)
               }
-            },    
-            error: function(){}
-          });
+            });
+          }
 
-        });
+          function deleteData(id){
+              $.ajax({    
+              type: "GET",
+              url: `http://127.0.0.1:8000/delete_user/${id}`,
+              contentType: "application/json",
+              dataType: "json",
+              success: function(response) {
+                fetchUserData()
+
+                console.log('User Deleted')
+              },    
+              error: function(){}
+            });
+          }
+
+          
+          function updateUserModal(id,name,contact,email,isAdmin){
+
+            $('#updateUserIdInput').val(id);
+            $('#updateUserNameInput').val(name);
+            $('#updateUserContactInput').val(contact);
+            $('#updateUserEmailInput').val(email);
+            $('#updateUserAdminInput').val(isAdmin);
+
+          }
+
+          function updateUser(){
+            let userUpdateModel = {
+              id: $('#updateUserIdInput').val(),
+              name: $('#updateUserNameInput').val(),
+              contact: $('#updateUserContactInput').val(),
+              email: $('#updateUserEmailInput').val(),
+              isAdmin: $('#updateUserAdminInput').val(),
+            };
+
+            $.ajax({    
+              type: "POST",
+              url: "http://127.0.0.1:8000/edit_user",
+              headers: {
+                "X-CSRF-Token": $('meta[name="csrf-token"]').attr('content')
+              },
+              data: userUpdateModel,
+              dataType: "json",
+              success: function(response){
+                
+                fetchUserData();
+
+                console.log(response.success)
+
+              },    
+              error: function(error){
+                console.log(error)
+              }
+            });
+          }
+
+          $('#createNewUserBtn').click(function (){
+            createNewUser()
+          })
+
+          $('#createNewUserBtn').click(function (){
+            deleteUser()
+          })
     </script>
   
 </body>
