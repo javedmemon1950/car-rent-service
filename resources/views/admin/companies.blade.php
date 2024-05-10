@@ -28,9 +28,9 @@
         <div class="page-breadcrumb">
           <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-              <h4 class="page-title">Users</h4>
+              <h4 class="page-title">Companies</h4>
               <div class="ms-auto text-end">
-                <a href="{{ route('admin.add_user') }}" type="button" class="btn btn-primary">
+                <a href="{{ route('admin.add_company') }}" type="button" class="btn btn-primary">
                     <i class="mdi mdi-account-plus"></i>
                     <span class="">Add New</span>
                 </a>
@@ -42,7 +42,7 @@
         <div class="container-fluid">
             <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title">User List</h5>
+                  <h5 class="card-title">Company List</h5>
                   <div class="table-responsive">
                     <table
                       id="zero_config"
@@ -51,27 +51,26 @@
                       <thead>
                         <tr>
                           <th>Name</th>
-                          <th>Email</th>
                           <th>Phone</th>
-                          <th>Role</th>
+                          <th>Email</th>
+                          <th>Address</th>
+                          <th>Description</th>
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      <tbody id="userDataTable">
-                        @foreach($users as $user)
+                      <tbody id="companyDataTable">
+                        @foreach($companies as $company)
                         <tr>
-                          <td>{{ $user->name }}</td>
-                          <td>{{ $user->email }}</td>
-                          <td>{{ $user->contact }}</td>
-                          <td>{{ $user->isAdmin == 0 ? 'Customer' : 'Admin'}}</td>
+                          <td>{{ $company->name }}</td>
+                          <td>{{ $company->contact }}</td>
+                          <td>{{ $company->email }}</td>
+                          <td>{{ $company->address }}</td>
+                          <td>{{ $company->description }}</td>
                           <td>
-                            <!-- <a id="viewUserBtn" type="button" class="btn btn-outline-primary">
-                                <i class="mdi mdi-eye-outline"></i>
-                            </a> -->
-                            <a href="{{ route('admin.update_user', $user->id) }}" id="updateUserBtn" type="button" class="btn btn-outline-warning">
+                            <a href="{{ route('admin.update_company', $company->id) }}" id="updateCompanyBtn" type="button" class="btn btn-outline-warning">
                                 <i class="mdi mdi-lead-pencil"></i>
                             </a>
-                            <a href="{{ route('admin.delete_user', $user->id) }}" id="deleteUserBtn" type="button" class="btn btn-outline-danger">
+                            <a href="{{ route('admin.delete_company', $company->id) }}" id="deleteCompanyBtn" type="button" class="btn btn-outline-danger">
                                 <i class="mdi mdi-delete"></i>
                             </a>
                           </td>

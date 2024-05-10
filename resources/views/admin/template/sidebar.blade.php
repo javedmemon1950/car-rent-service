@@ -17,7 +17,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="{{ route('admin.users') }}"
+                  href="{{ route('admin.all_users') }}"
                   aria-expanded="false"
                   ><i class="mdi mdi-account"></i
                   ><span class="hide-menu">User</span></a
@@ -47,7 +47,7 @@
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="index.html"
+                  href="{{ route('admin.all_companies') }}"
                   aria-expanded="false"
                   ><i class="mdi mdi-tag"></i
                   ><span class="hide-menu">Company</span></a

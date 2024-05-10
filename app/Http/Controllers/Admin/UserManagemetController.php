@@ -12,7 +12,11 @@ class UserManagemetController extends Controller
     function all_users() {
         $users = User::all();
 
-        return response()->json($users);
+        return view('admin.users',['users' => $users]);
+    }
+
+    function add_user() {
+        return view('admin.add_user');
     }
 
     function create_user(Request $request){
@@ -40,15 +44,15 @@ class UserManagemetController extends Controller
         $user->save();
 
         if($user){
-            return response()->json([
-                "data" => $user,
-                "success" => "User added successfully"
-            ]);
+            return redirect('/all_users');
         }
 
-        return response()->json([
-            "error" => "Something went wrong"
-        ]);
+        return redirect()->back();
+    }
+
+    function update_user($id) {
+        $user = User::find($id);
+        return view('admin.update_user', ['user' => $user]);
     }
 
     function edit_user(Request $request){
@@ -63,7 +67,6 @@ class UserManagemetController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->contact = $request->contact;
-        // $user->password = bcrypt($request->password);
         $isAdmin = 0;
         
         if($request->isAdmin == 'on'){
@@ -73,48 +76,13 @@ class UserManagemetController extends Controller
         $user->isAdmin = $isAdmin;
         $user->save();
 
-        if($user){
-            return response()->json([
-                "data" => $user,
-                "success" => "User updated successfully"
-            ]);
-        }
+        return redirect('/all_users');
+
     }
 
     function delete_user($id) {
         $user = User::find($id);
         $user->delete();
-        return response()->json([
-            "success" => "User deleted successfully"
-        ]);
+        return redirect()->back();
     }
 }
-
-
-// let dummyData = {
-//     name: 'Test',
-//     contact: '03311331133',
-//     email: 'test@email.com',
-//     password: 'Admin123',
-//     password_confirmation: 'Admin123',
-//     isAdmin: 1,
-//   };
-
-//   $.ajax({
-//     url: "http://127.0.0.1:8000/create_user", // Your API endpoint URL
-//     method: "POST",
-//     headers: {
-//         "X-CSRF-Token": $('meta[name="csrf-token"]').attr('content') // Include the CSRF token in the request headers
-//     },
-//     data: dummyData, // Data to be sent in the request body
-//     dataType: "json", // Expected data type of the response
-//     success: function(response) {
-//         // Handle successful response
-//         console.log('POST request successful:', response);
-//         // You can process the response data here
-//     },
-//     error: function(xhr, status, error) {
-//         // Handle errors
-//         console.error('Error making POST request:', error);
-//     }
-// });
